@@ -10,7 +10,7 @@ sample_data = {'First-Semester Score (X)': [4.5, 5.2, 6.0, 6.4, 7.1, 7.3, 8.0, 8
 df = pd.DataFrame(sample_data)
 # 80% Training, 20% Testing
 train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
-print("Training Data:", train_df)
+print("Training Data:\n", train_df)
 # Features and Targets
 X_train = train_df[['First-Semester Score (X)']]
 y_train = train_df['Second-Semester Score (Y)']
