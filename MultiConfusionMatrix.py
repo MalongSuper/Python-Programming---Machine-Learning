@@ -7,8 +7,8 @@ from sklearn.metrics import confusion_matrix
 
 def get_components(confusion_matrix, k):
     tp = confusion_matrix[k, k]
-    fp = confusion_matrix[:, k].sum()
-    fn = confusion_matrix[k, :].sum()
+    fp = confusion_matrix[:, k].sum() - tp
+    fn = confusion_matrix[k, :].sum() - tp
     tn = confusion_matrix.sum() - (tp + fp + fn)
     return tp, fp, fn, tn
 
