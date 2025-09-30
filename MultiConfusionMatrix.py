@@ -26,7 +26,7 @@ print("Confusion Matrix:\n", confusion_matrix)
 
 
 for i in unique_labels:
-    print("Class", i)
+    print("Label", i)
     tp, fp, fn, tn = get_components(confusion_matrix, i)
     accuracy = (tp + tn) / (tp + tn + fp + fn)
     precision = tp / (tp + fp)
