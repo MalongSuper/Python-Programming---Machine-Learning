@@ -13,8 +13,8 @@ def get_components(confusion_matrix, k):
     return tp, fp, fn, tn
 
 
-true_value = np.array(['A', 'B', 'A', 'C', 'C', 'B', 'A', 'A', 'A', 'B', 'B', 'C'])
-predict_value = np.array(['A', 'A', 'C', 'C', 'B', 'B', 'A', 'A', 'A', 'C', 'A', 'A'])
+true_value = np.array(['A', 'B', 'A', 'C', 'C', 'B', 'A', 'A', 'A', 'B', 'B', 'C', 'C', 'C', 'B'])
+predict_value = np.array(['A', 'A', 'C', 'C', 'B', 'B', 'A', 'A', 'A', 'C', 'A', 'A', 'C', 'C', 'B'])
 # Replace the element
 true_df = pd.Series(true_value).replace({"A": 0, "B": 1, "C": 2})
 pred_df = pd.Series(predict_value).replace({"A": 0, "B": 1, "C": 2})
